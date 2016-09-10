@@ -1,0 +1,65 @@
+{% extends data.outerLayout %}
+
+{% block extraHead %}{% include "header_extras.html" %}{% endblock %}
+
+{% block title %}A page{% endblock %}
+
+{% block beforeMain %}
+
+
+
+	<div class="container">
+
+
+{% include "navigation.html" %}
+
+<BR><BR><BR>
+
+<h2><a href="{{ data.home._url }}">{{ data.home.title }}</a></h2>
+
+  <div class="block hero">
+    <div class="inner">
+      <div class="hero-text">
+        <h4>Welcome to my first Apostrophe site!</h4>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block main %}
+  <div class="main-content">
+    {{ apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
+      toolbar: [ 'Bold', 'Italic' ]
+    }) }}
+  </div>
+
+
+ 
+
+{% include "apostrophe-search:miniForm.html" %}
+
+
+</div>
+
+{% endblock %}
+
+
+
+{% block extraBody %}{% include "footer_extras.html" %}{% endblock %}
+
+
+
+
+<ul class="tabs">
+  {% for tab in data.home._children %}
+    <li><a href="{{ tab._url }}">{{ tab.title }}</a>
+      {% if tab._children.length %}
+        <ul>
+          {% for child in tab._children %}
+            <li><a href="{{ child._url }}">{{ child.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

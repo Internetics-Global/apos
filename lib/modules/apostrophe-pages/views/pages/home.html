@@ -1,0 +1,35 @@
+{% extends data.outerLayout %}
+
+{% block extraHead %}{% include "header_extras.html" %}{% endblock %}
+
+{% block title %}Home{% endblock %}
+{% block main %}
+
+
+<div class="container">
+
+{% include "navigation.html" %}
+
+
+
+  <div class="main-content">
+    <h3>Hello world!
+      <a class="login-link" href="/login">Login</a>
+    </h3>
+    <p>This is a very barebones Apostrophe project. Now, get to work and make a real website!</p>
+  </div>
+  
+  
+
+  <div class="main-content">
+    {{ apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
+      toolbar: [ 'Bold', 'Italic' ]
+    }) }}
+  </div>
+
+
+
+
+</div>
+  
+{% endblock %}
