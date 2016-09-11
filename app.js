@@ -31,19 +31,8 @@ var apos = require('apostrophe')({
     
     
     // Search
-    'apostrophe-search': {
-    
-         filters: [
-        {
-          name: 'default',
-          label: 'Default'
-        },
-       
-      ]
-   
-    },
-    
-    
+    'apostrophe-search': {},
+  
     
     
     // Add your modules and their respective configuration here!
@@ -65,19 +54,20 @@ var apos = require('apostrophe')({
       },
     
 
-      types: [
-        {
-          name: 'default',
-          label: 'Default'
-        },
-        {
-          name: 'home',
-          label: 'Home'
-        }
-      ]
+      park: [ 
+        { 
+          slug: '/search', 
+          type: 'apostrophe-search', 
+          label: 'Search', 
+          published: true 
+        } 
+      ] 
+      
+      
     },
 
-
+	'contact-form': {},
+    'contact-form-widgets': {}
 
 
 

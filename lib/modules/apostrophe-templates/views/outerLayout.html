@@ -1,0 +1,77 @@
+{% extends "outerLayoutBase.html" %}
+
+{% block title %}{{ data.page.title }}:internetics{% endblock %}
+
+{% block extraHead %}
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+{% endblock %}
+
+
+
+{% block beforeMain %}
+
+	<div class="container">
+
+{% include "apostrophe-pages:navigation.html" %}
+
+<BR><BR><BR>page title: {{ data.page.title }} and this is the url: {{ data.page._url }}
+
+
+<h2><a href="{{ data.home._url }}">in here please</a></h2>
+
+  <div class="block hero">
+    <div class="inner">
+      <div class="hero-text">
+        <h4>This is the {{ tab.title }} page</h4>
+      </div>
+    </div>
+  </div>
+{% endblock %} <!-- ends before main -->
+
+
+
+
+{% block main %}
+    {{ apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
+      toolbar: [ 'Bold', 'Italic' ]
+    }) }}
+
+
+ 
+
+{% include "apostrophe-search:miniForm.html" %}
+
+
+
+{% endblock %}  <!-- ends main block -->
+
+{% block afterMain %}
+
+After the main section
+
+{% endblock %}
+
+{% block extraBody %}
+
+<center>Copyright Internetics 2016</center>
+
+</div> <!-- ends container -->
+
+{% endblock %}
+
+
+
+
+
+
