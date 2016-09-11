@@ -4,69 +4,78 @@
 
 {% block extraHead %}
 
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<!-- Bootstrap Core CSS -->
+    <link href="/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="/theme/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/theme/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="/theme/vendor/device-mockups/device-mockups.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Theme CSS -->
+    <link href="/theme/css/new-age.min.css" rel="stylesheet">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 {% endblock %}
 
-
-
 {% block beforeMain %}
 
-	<div class="container">
 
-{% include "apostrophe-pages:navigation.html" %}
+<body id="page-top">
 
-<BR><BR><BR>page title: {{ data.page.title }} and this is the url: {{ data.page._url }}
+    
+
+{% include "apostrophe-pages:navigation.html" %}                        
+                            
 
 
-<h2><a href="{{ data.home._url }}">in here please</a></h2>
-
-  <div class="block hero">
-    <div class="inner">
-      <div class="hero-text">
-        <h4>This is the {{ tab.title }} page</h4>
-      </div>
-    </div>
-  </div>
 {% endblock %} <!-- ends before main -->
 
 
 
 
 {% block main %}
-    {{ apos.singleton(data.page, 'textBlock', 'apostrophe-rich-text', {
-      toolbar: [ 'Bold', 'Italic' ]
-    }) }}
-
-
- 
-
-{% include "apostrophe-search:miniForm.html" %}
-
 
 
 {% endblock %}  <!-- ends main block -->
 
 {% block afterMain %}
 
-After the main section
-
 {% endblock %}
 
 {% block extraBody %}
 
-<center>Copyright Internetics 2016</center>
+ <footer>
+        <div class="container">
+            <p>&copy; 2016 Internetics</p>
+           
+        </div>
+    </footer>
 
-</div> <!-- ends container -->
+    <!-- jQuery -->
+    <script src="/theme/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="/theme/js/new-age.min.js"></script>
+
+
 
 {% endblock %}
 
