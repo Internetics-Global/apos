@@ -1,20 +1,68 @@
 {% extends data.outerLayout %}
 
-
 {% block main %}
 
 
-<header>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-7">
-                    <div class="header-content">
-                        <div class="header-content-inner">
-                            <h1>New Age is an app landing page that will help you beautifully showcase your new mobile app, or anything else!</h1>
-                            <a href="#download" class="btn btn-outline btn-xl page-scroll">Start Now for Free!</a>
-                            
 
 
+
+
+<!-- PAGE HEADER -->
+	<div class="page_header">
+		<div class="page_header_parallax">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h3><span>{{ apos.singleton(data.page, 'textBlock1', 'apostrophe-rich-text', {
+      toolbar: [ 'Bold', 'Italic' ]
+    }) }}</span></h3>
+    <h3>{{ apos.singleton(data.page, 'textBlock2', 'apostrophe-rich-text', {
+      toolbar: [ 'Bold', 'Italic' ]
+    }) }}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bcrumb-wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						{% if data.page %}
+  <ul class="bcrumbs">
+    {% for ancestor in data.page._ancestors %}
+      <li><a href="{{ ancestor._url }}">{{ ancestor.title }}</a></li>
+    {% endfor %}
+    <li><a href="{{ data.page._url }}">{{ data.page.title }}</a></li>
+  </ul>
+{% endif %}
+
+
+
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<!-- INNER CONTENT -->
+	<div class="inner-content">
+		<div class="container">
+			<h2 class="uppercase text-center space30">{{ apos.singleton(data.page, 'textBlock3', 'apostrophe-rich-text', {
+      toolbar: [ 'Bold', 'Italic' ]
+    }) }}</h2>
+			<img src="/theme/images/bg/3.jpg" class="img-responsive" alt=""/>
+			<div class="clearfix space30"></div>
+			
+			
 <BR><BR><BR>page title: {{ data.page.title }} and this is the url: {{ data.page._url }}
 
 
@@ -36,40 +84,51 @@
 
  
 
-{% include "apostrophe-search:miniForm.html" %}                        
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5">
-                    <div class="device-container">
-                        <div class="device-mockup iphone6_plus portrait white">
-                            <div class="device">
-                                <div class="screen">
-                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <img src="theme/img/demo-screen-1.jpg" class="img-responsive" alt="">
-                                </div>
-                                <div class="button">
-                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                                </div>
-                                
-                                
-                            
-                                
-                                
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    
-    
-    
-    
+{% include "apostrophe-search:miniForm.html" %}  
+
+
+
+{{
+    apos.area(data.page, 'body', {
+      widgets: {
+        'contact-form': {}
+      }
+    })
+  }}
+
+			
+			
+			
+			<p>Quisque nisi erat, laoreet vel venenatis sed, dapibus et tortor. Sed rhoncus est in urna facilisis aliquam. Donec vehicula mauris vitae aliquam iaculis. Quisque pharetra urna in ligula ultrices, in egestas metus commodo. Curabitur aliquet auctor metus, id iaculis purus vulputate sit amet. Mauris dictum odio lectus, quis ornare lacus dignissim id. Nullam a ante sodales, fermentum orci et, facilisis nibh. Phasellus nec felis libero. Suspendisse dignissim sit amet urna eu sodales. Donec vitae sodales velit.</p>
+			<p>Phasellus sed feugiat leo. Nam vitae viverra tortor, eu mattis nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam feugiat augue vel tellus tempus, vitae pretium velit venenatis. Donec eu posuere lectus. Quisque vel urna eu orci consectetur rutrum ac et ipsum. Donec convallis vestibulum orci at suscipit. Duis lobortis libero ut leo rutrum facilisis. Vivamus maximus facilisis fermentum. Fusce posuere luctus sem, eget rutrum tellus tincidunt finibus. Aenean id ligula ac velit hendrerit tempor ut at mi. Donec eu justo sed velit lacinia suscipit. Etiam dictum augue ante, non pulvinar turpis feugiat elementum. Aliquam malesuada, enim at suscipit convallis, ligula purus euismod sem, at mattis est turpis dapibus felis. </p>
+			<blockquote class="style1">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet. Integer posuere erat a ante.</p>
+				<small><b>Author Name</b></small>
+			</blockquote>
+			<p>In hac habitasse platea dictumst. Aenean sollicitudin, felis non sodales vestibulum, erat ipsum egestas tortor, vitae tincidunt augue quam quis ex. Phasellus ac laoreet leo. Vestibulum in dolor eget velit elementum iaculis. Aenean pulvinar leo sit amet venenatis euismod. Praesent cursus, felis in feugiat pellentesque, nisl nibh dapibus lacus, at feugiat arcu ante a dolor. Curabitur et egestas eros, quis blandit arcu.</p>
+		</div>
+	</div>
+
+	<!-- TWEET / SUBSCRIBE -->
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 f-tweet">
+					<small>Follow<em>Twitter</em></small>
+					<div class="tweet-info">
+						<div id="tweetcool"></div>
+					</div>
+				</div>
+				<div class="col-md-5 f-subscribe">
+					<small>Sign up<em>Newsletter</em></small>
+					<form>
+						<input placeholder="Search here ..." type="text">
+						<button type="submit">Subscribe</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 {% endblock %}  <!-- ends main block -->

@@ -5,36 +5,49 @@
 {% block extraHead %}
 
 <!-- Bootstrap Core CSS -->
-    <link href="/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css">
 
-    <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/theme/js/owl-carousel/owl.carousel.css">
+	<link rel="stylesheet" href="/theme/js/owl-carousel/owl.theme.css">
+	<link rel="stylesheet" href="/theme/js/owl-carousel/owl.transitions.css">
+	<link rel="stylesheet" href="/theme/js/rs-plugin/css/settings.css">
+	<link rel="stylesheet" href="/theme/js/flexslider/flexslider.css">
+	<link rel="stylesheet" href="/theme/js/isotope/isotope.css">
+	<link rel="stylesheet" href="/theme/css/jquery-ui.css">
+	<link rel="stylesheet" href="/theme/js/magnific-popup/magnific-popup.css">
+	<link rel="stylesheet" href="/theme/css/style.css">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="/theme/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/theme/vendor/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="/theme/vendor/device-mockups/device-mockups.min.css">
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- Theme CSS -->
-    <link href="/theme/css/new-age.min.css" rel="stylesheet">
+	<!-- Icon Fonts -->
+	<link rel="stylesheet" href="/theme/css/icomoon/style.css" type="text/css">
+	<link rel="stylesheet" href="/theme/font-awesome/css/font-awesome.min.css" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<!-- SKIN -->
+	<link rel="stylesheet" href="/theme/css/color-scheme/default-blue.css" type="text/css">
+
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+           <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>      
+	<![endif]-->
 
 {% endblock %}
 
 {% block beforeMain %}
 
+<div class="outer-wrapper">   
 
-<body id="page-top">
 
-    
 
 {% include "apostrophe-pages:navigation.html" %}                        
                             
@@ -48,6 +61,15 @@
 {% block main %}
 
 
+<div class="inner-content">
+		<div class="container">
+			<h2 class="uppercase text-center space30">Home page</h2>
+			<img src="/theme/images/bg/3.jpg" class="img-responsive" alt=""/>
+			
+</div>
+</div>			
+			
+
 {% endblock %}  <!-- ends main block -->
 
 {% block afterMain %}
@@ -56,24 +78,79 @@
 
 {% block extraBody %}
 
- <footer>
-        <div class="container">
-            <p>&copy; 2016 Internetics</p>
-           
-        </div>
-    </footer>
+<!-- FOOTER -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9">
+					<h4 class="space30">About us</h4>
+					<img src="/theme/images/basic/logo-ico.png" class="img-responsive space20" width="70" alt=""/>
+					<p>Lorem ipsum dolor sit amet consec tetur elit vel quam ligula. Duis vel pulvinar diam in lacus non nisl commodo convallis.</p>
+					<p>Phasellus rutrum urna ut nibh congue, ut vehicula nibh ultricies.</p>
+				</div>
+				
+				<div class="col-md-3">
+					<h4 class="space30">Contact</h4>
+					<ul class="c-info">
+						<li><i class="fa fa-map-marker"></i> Our address line 1<BR>Address Line 2<BR>Brisbane<BR>Queensland 4060
+						</li>
+						<li>
+						</li>
+						<li><i class="fa fa-phone"></i> (07) 3102 1966</li>
+						<li><i class="fa fa-envelope-o"></i> office@internetics.net.au</li>
+						
+					</ul>
+					<div class="clearfix space10"></div>
+				</div>
+				
+			</div>
+		</div>
+	</footer>
 
-  
+	<!-- FOOTER COPYRIGHT -->
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<p>&copy; Copyright 2016 Internetics</p>
+				</div>
+				<div class="col-md-4">
+					<div class="f-social pull-right">
+						<a class="fa fa-twitter" href="#"></a>
+						<a class="fa fa-facebook" href="#"></a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/theme/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-    <!-- Theme JavaScript -->
-    <script src="/theme/js/new-age.min.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
+<!-- Plugins -->
+<script src="/theme/js/bootstrap.min.js"></script>
+<script src="/theme/js/menu.js"></script>
+<script src="/theme/js/owl-carousel/owl.carousel.min.js"></script>
+<script src="/theme/js/rs-plugin/js/jquery.themepunch.tools.min.js"></script>   
+<script src="/theme/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/theme/js/jquery.easing.min.js"></script>
+<script src="/theme/js/isotope/isotope.pkgd.js"></script>
+<script src="/theme/js/jflickrfeed.min.js"></script>
+<script src="/theme/js/tweecool.js"></script>
+<script src="/theme/js/flexslider/jquery.flexslider.js"></script>
+<script src="/theme/js/easypie/jquery.easypiechart.min.js"></script>
+<script src="/theme/js/jquery-ui.js"></script>
+<script src="/theme/js/jquery.appear.js"></script>
+<script src="/theme/js/jquery.inview.js"></script>
+<script src="/theme/js/jquery.countdown.min.js"></script>
+<script src="/theme/js/jquery.sticky.js"></script>
+<script src="/theme/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="/theme/js/main.js"></script>
 
 
 {% endblock %}

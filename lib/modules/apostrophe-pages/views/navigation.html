@@ -1,17 +1,40 @@
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-     
-          <div class="container">   
-            
-
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	<header id="header-main">
+		<div class="container">
+			<div class="navbar yamm navbar-default">
+				<div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
               <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="{{ data.home._url }}">{{ data.home.title }}</a>
+            <a class="navbar-brand" href="{{ data.home._url }}"><img src="/theme/images/basic/logo.png" width="40" alt=""/></a>
           </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-<ul class="nav navbar-nav navbar-right">
+ 
+ 
+ 
+ 
+ 
+ <!-- CART / SEARCH -->
+				<div class="header-x pull-right">
+					
+					<div class="s-search">
+						<div class="ss-trigger"><i class="icon-search2"></i></div>
+						<div class="ss-content">
+							<span class="ss-close icon-cross2"></span>
+							<div class="ssc-inner">
+								<form>
+									<input type="text" placeholder="Type Search text here...">
+									<button type="submit"><i class="icon-search2"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+ 
+ 
+          
+          
+<div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
+					<ul class="nav navbar-nav">
+						
 
 <li><a href="{{ data.home._url }}">Home</a></li>
 
@@ -42,6 +65,7 @@
 
 </ul>
             
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
+</div>
+			</div>
+		</div>
+	</header>
