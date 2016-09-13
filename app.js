@@ -35,7 +35,11 @@ var apos = require('apostrophe')({
     // Search
     'apostrophe-search': {},
     
- 'apostrophe-blog': {},
+ 'apostrophe-blog': {
+ 
+ contextual: 'true'
+ 
+ },
   'apostrophe-blog-pages': {},
   'apostrophe-blog-widgets': {},
     
