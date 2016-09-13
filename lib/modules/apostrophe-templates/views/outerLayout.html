@@ -63,8 +63,17 @@
 
 <div class="inner-content">
 		<div class="container">
-			<h2 class="uppercase text-center space30">Home page</h2>
-			<img src="/theme/images/bg/3.jpg" class="img-responsive" alt=""/>
+			<h2 class="uppercase text-center space30">{{ apos.singleton(data.page, 'textBlock1', 'apostrophe-rich-text', {
+      toolbar: [ 'Bold', 'Italic' ]
+    }) }}</h2>
+			
+ {{ apos.singleton(data.page, 'heroPic', 'apostrophe-images', {
+    minSize: [ 700, 350 ],
+    aspectRatio: [ 2, 1 ],
+    limit: 1,
+    size: 'full'
+  }) }}
+			
 			
 </div>
 </div>			

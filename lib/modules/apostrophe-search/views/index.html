@@ -3,6 +3,9 @@
 
 {% block main %}
 
+	<div class="inner-content">
+		<div class="container">
+
   <form data-apos-search-page-form method="GET" action="{{ data.url | e }}#main">
     {% if data.filters %}
       <div class="ld-meta">Filter Results By Type</div>
@@ -17,16 +20,26 @@
         {% endfor %}
       </ul>
     {% endif %}
-    <div class="ld-meta">New Search</div>
+    <div class="ld-meta"></div>
     <input type="search" data-apos-search-field value="{{ data.query.q | e }}" name="q" />
     <input type="submit" value="Search" />
   </form>
+  <h1>Search Results</h1>
   {% for doc in data.docs %}
-    <h4>{% if doc._url %}<a href="{{ doc._url }}">{% endif %}{{ doc.title }}{% if doc._url %}</a>{% endif %}</h4>
-  {% endfor %}
+    <h4>{% if doc._url %}<a href="{{ doc._url }}">{% endif %}{{ doc.title }}{% if doc._url %}</a>
+    
+
+    
+    
+    
+    {% endif %}</h4>
+    {% else %}
+    <h3>Sorry, but no search results matched your query.</h3>
+  {% endfor %} 
   {% include "pager.html" %}
   
-
+</div>
+</div>
  
  
  {% endblock %}

@@ -15,8 +15,7 @@
 					<div class="col-md-12">
 						<h3><span>{{ apos.singleton(data.page, 'textBlock1', 'apostrophe-rich-text', {
       toolbar: [ 'Bold', 'Italic' ]
-    }) }}</span></h3>
-    <h3>{{ apos.singleton(data.page, 'textBlock2', 'apostrophe-rich-text', {
+    }) }}</span></h3><h3>{{ apos.singleton(data.page, 'textBlock2', 'apostrophe-rich-text', {
       toolbar: [ 'Bold', 'Italic' ]
     }) }}</h3>
 					</div>
@@ -91,7 +90,8 @@
 {{
     apos.area(data.page, 'body', {
       widgets: {
-        'contact-form': {}
+        'contact-form': {},
+        'apostrophe-blog': {}
       }
     })
   }}

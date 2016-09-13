@@ -1,8 +1,10 @@
 var apos = require('apostrophe')({
   shortName: 'apos',
   title: 'apos',
-
+  bundles: [ 'apostrophe-blog' ],
   // These are the modules we want to bring into the project.
+
+  
   modules: {
     // This configures the apostrophe-users module to add an admin-level
     // group by default
@@ -32,7 +34,10 @@ var apos = require('apostrophe')({
     
     // Search
     'apostrophe-search': {},
-  
+    
+ 'apostrophe-blog': {},
+  'apostrophe-blog-pages': {},
+  'apostrophe-blog-widgets': {},
     
     
     // Add your modules and their respective configuration here!
@@ -52,6 +57,25 @@ var apos = require('apostrophe')({
         // We usually want children of the current page, too
         children: true
       },
+      
+      types: [
+      {
+        name: 'general-page',
+        label: 'General page'
+      },
+      {
+        name: 'default',
+        label: 'Default'
+      },
+      {
+        name: 'home',
+        label: 'Home'
+      },
+      {
+        name: 'apostrophe-blog-page',
+        label: 'Blog'
+      }
+    ],
     
 
       park: [ 
