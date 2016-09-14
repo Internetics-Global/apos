@@ -30,8 +30,7 @@ var apos = require('apostrophe')({
       ]
     },
     
-    
-    
+   
     // Search
     'apostrophe-search': {},
     

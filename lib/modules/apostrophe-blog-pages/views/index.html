@@ -3,18 +3,70 @@
 
 {% block main %}
 
-<div class="inner-content">
-		<div class="container">
 
-  {% for piece in data.pieces %}
-    <div class="apos-blog-post-preview">
-      <h6 class="apos-blog-post-date">Published On {{ piece.publishedAt | date('MMMM Do, YYYY') }}</h6>
-      <h4 class="apos-blog-post-title"><a href="{{ piece._url }}">{{ piece.title }}</a></h4>
-    </div>
-  {% endfor %}
+ <!-- INNER CONTENT -->
+	<div class="inner-content">
+		<div class="container">
+			<div class="row">
+				<!-- Sidebar -->
+				<aside class="col-sm-3 ">
+					<div class="side-widget space50">
+						<h4>Search</h4>
+						{% include "apostrophe-search:miniForm.html" %}  
+					</div>
+									</aside>
+				<div class="col-md-9 blog-content">
+					
+					
+					
+					{% for piece in data.pieces %}
+					
+					<article class="blogpost">
+						<h2 class="post-title"><a href="{{ piece._url }}">{{ piece.title }}</a></h2>
+						<div class="post-meta">
+							<span><a href="#"><i class="icon-clock2"></i> {{ piece.publishedAt | date('MMMM Do') }} at {{ piece.publishedAt | date('h:mma') }}</a></span>
+						</div>
+						<div class="space20"></div>
+
+						<div class="post-excerpt">
+							{{ apos.area(piece, 'body', { truncate: 20 }) }}
+							
+
+							
+							
+							</div>
+						
+						<div class="space20"></div>
+						
+						<a href="{{ piece._url }}" class="button btn-xs">Read More&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+					</article>
+					
+					<div class="space50"></div>
+					
+				{% endfor %}
+					
+					<div class="space50"></div>
+											
+					
+					<!-- Pagination -->
+					<div class="page_nav">
+						<a href=""><i class="fa fa-angle-left"></i></a>
+						<a href="" class="active">1</a>
+						<a href="">2</a>
+						<a href="">3</a>
+						<a class="no-active">...</a>
+						<a href="">9</a>
+						<a href=""><i class="fa fa-angle-right"></i></a>
+					</div>
+					<!-- End Pagination -->
+				</div>
+			</div>
+		</div>
+	</div> 
   
-  </div>
   
-</div>
+  
+
+
   
 {% endblock %}

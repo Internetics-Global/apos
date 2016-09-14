@@ -3,14 +3,28 @@
 
 {% block main %}
 
-<div class="inner-content">
-		<div class="container">
-  <div class="apos-event-preview">
-    <h3 class="apos-event-title">{{ data.piece.title }}</h3>
-    <h5 class="apos-event-date">{{ data.piece.publishedAt | date('MMMM Do') }} at {{ data.piece.publishedAt | date('h:mma') }}</h5>
-
   
-  {{ apos.area(data.page, 'body', {
+ <!-- INNER CONTENT -->
+	<div class="inner-content">
+		<div class="container">
+			<div class="row">
+				<!-- Sidebar -->
+				<aside class="col-sm-3 ">
+					<div class="side-widget space50">
+						<h4>Search</h4>
+						{% include "apostrophe-search:miniForm.html" %}  
+					</div>
+									</aside>
+				<div class="col-md-9 blog-content">
+					<article class="blogpost">
+						<h2 class="post-title"><a href="#">{{ data.piece.title }}</a></h2>
+						<div class="post-meta">
+							<span><a href="#"><i class="icon-clock2"></i> {{ data.piece.publishedAt | date('MMMM Do') }} at {{ data.piece.publishedAt | date('h:mma') }}</a></span>
+						</div>
+						<div class="space20"></div>
+
+						<div class="post-excerpt">
+							 {{ apos.area(data.piece, 'body', {
   widgets: {
     'apostrophe-rich-text': {
       toolbar: [ 'Bold', 'Italic' ]
@@ -20,11 +34,19 @@
     }
   }
 }) }}
+<div class="space40"></div>
+						</div>
+										</article>
+					
+					
+					<div class="space50"></div>
+					
+					
+				</div>
+			</div>
+		</div>
+	</div> 
   
   
-  </div>
   
-  
-  </div>
-  </div>
 {% endblock %}

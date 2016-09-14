@@ -12,6 +12,26 @@ body {
 	background: #FFF url("../images/pattern/pattern11.png") fixed; 
 }
 
+
+
+
+
+
+.apos-area-widget-wrapper {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.apos-ui {
+    padding: 1px;
+}
+
+
+
+
+
+
+
 .apos-rich-text p {
     font-size: inherit;
 }
@@ -426,6 +446,9 @@ background:transparent !important;
 .space100 {
 	margin-bottom: 100px;
 }
+
+
+
 
 .button {
 	background: #000;
