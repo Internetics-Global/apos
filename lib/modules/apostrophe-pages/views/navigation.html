@@ -47,11 +47,20 @@
                 <ul class="dropdown-menu">
 
                   {% for child in tab._children %}
+                  
+                  
+                  			{% if tab._url %}
+				  				It is true
+				  			{% endif %}
+                  
+                  
                     <li><a href="{{ tab._url }}">{{ tab.title }}</a>
             		<li><a href="{{ child._url }}">{{ child.title }}</a></li>
           		  {% endfor %}
 
                 </ul>
+                
+                 </li>
       
         	{% else %} 
        
@@ -59,7 +68,7 @@
         
         	{% endif %}
 
-            </li>
+           
               
     {% endfor %}
 

@@ -12,30 +12,6 @@ body {
 	background: #FFF url("../images/pattern/pattern11.png") fixed; 
 }
 
-
-
-
-
-
-.apos-area-widget-wrapper {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.apos-ui {
-    padding: 1px;
-}
-
-
-
-
-
-
-
-.apos-rich-text p {
-    font-size: inherit;
-}
-
 a {
 	color: #8dc73f;
 	transition: .4s;
@@ -147,7 +123,7 @@ ul, li {
     left: 0px;
     right: 0px;
     font-family: raleway;
-    z-index: 99;
+    z-index: 99999;
 }
 
 #header-main .navbar-default {
@@ -161,8 +137,8 @@ ul, li {
 
 
 #header-main .navbar-brand img {
-margin-top: -10px;
-    width: 193px;
+    width: 123px;
+    height: 24px;
 }
 
 #header-main .navbar {
@@ -446,9 +422,6 @@ background:transparent !important;
 .space100 {
 	margin-bottom: 100px;
 }
-
-
-
 
 .button {
 	background: #000;

@@ -1,0 +1,31 @@
+.apos-area-widget-wrapper {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.apos-ui {
+    padding: 1px;
+}
+
+
+.apos-rich-text p {
+    font-size: inherit;
+}
+
+
+#header-main {
+    padding: 0px;
+    position: relative;
+    background-color: #FFF;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    font-family: raleway;
+    z-index: 99;
+}
+
+#header-main .navbar-brand img {
+margin-top: -10px;
+    width: 193px;
+    height: 38px;
+}
