@@ -22,10 +22,21 @@
     right: 0px;
     font-family: raleway;
     z-index: 99;
+    font-weight:bold;
 }
 
 #header-main .navbar-brand img {
 margin-top: -10px;
     width: 193px;
     height: 38px;
+}
+
+
+#header-main .navbar-nav > li > a:focus, #header-main .navbar-nav > li > a {
+    color: #000000;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 35px 18px 34px;
+    position: relative;
+    z-index: 99999;
 }
