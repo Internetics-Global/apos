@@ -39,7 +39,11 @@ var apos = require('apostrophe')({
  contextual: 'true'
  
  },
-  'apostrophe-blog-pages': {},
+  'apostrophe-blog-pages': {
+	  
+	  perPage: 2,
+	  
+  },
   'apostrophe-blog-widgets': {},
     
     

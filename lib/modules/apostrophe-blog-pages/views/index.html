@@ -31,7 +31,8 @@
 						<div class="post-excerpt">
 						
 							
-							{{ apos.areas.plaintext(piece, 'body', { limit: 20 }) }}
+							
+							{{ apos.areas.plaintext(piece.body, { limit: 400 }) }} 
 							
 
 							
@@ -55,19 +56,11 @@
 				{% endfor %}
 					
 					<div class="space50"></div>
-											
 					
-					<!-- Pagination -->
-					<div class="page_nav">
-						<a href=""><i class="fa fa-angle-left"></i></a>
-						<a href="" class="active">1</a>
-						<a href="">2</a>
-						<a href="">3</a>
-						<a class="no-active">...</a>
-						<a href="">9</a>
-						<a href=""><i class="fa fa-angle-right"></i></a>
-					</div>
-					<!-- End Pagination -->
+					{% import 'apostrophe-pager:macros.html' as pager with context %}
+  {{ pager.render({ page: data.currentPage, total: data.totalPages }, data.url) }}
+											
+
 				</div>
 			</div>
 		</div>

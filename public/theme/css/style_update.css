@@ -40,3 +40,9 @@ margin-top: -10px;
     position: relative;
     z-index: 99999;
 }
+
+
+.apos-login-wrapper {
+    background-color: #ffffff;
+    min-height: 600px;
+}
